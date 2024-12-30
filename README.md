@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interactive Developer Portfolio
+
+A modern, interactive developer portfolio built with Next.js featuring a command-line interface, dark mode, and animated transitions.
+
+## Features
+
+- 🖥️ Interactive Terminal Interface
+  - Custom commands (help, ls, whoami, skills, etc.)
+  - Command history
+  - Real-time feedback
+
+- 🌓 Dark/Light Mode
+  - System preference detection
+  - Manual toggle
+  - Persistent theme state
+
+- 📱 Responsive Design
+  - Mobile-friendly layout
+  - Grid-based project showcase
+  - Adaptive navigation
+
+- 📝 Contact Form
+  - Form validation
+  - Loading states
+  - API integration
+  - Error handling
+
+- 🎯 Core Sections
+  - About Me
+  - Projects Showcase
+  - Blog Posts
+  - Contact Form
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Type Safety**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/interactive-portfolio.git
+cd interactive-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Available Terminal Commands
 
-## Deploy on Vercel
+- `help`: Show available commands
+- `about`: View about section
+- `projects`: View projects section
+- `blog`: View blog posts
+- `contact`: View contact form
+- `theme`: Toggle dark/light mode
+- `clear`: Clear terminal
+- `ls`: List all sections
+- `whoami`: Display developer info
+- `skills`: List technical skills
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding New Commands
+
+To add new commands, modify the `commands` object in `Portfolio.tsx`:
+
+```javascript
+const commands = {
+  newCommand: {
+    description: 'Description of what the command does',
+    action: () => {
+      // Command logic here
+      return ['Output to display in terminal'];
+    }
+  }
+};
+```
+
+### Modifying Content
+
+1. **About Section**: Update the content in the `renderContent` function's 'about' case
+2. **Projects**: Modify the projects array in the 'projects' case
+3. **Blog Posts**: Update the blog posts array in the 'blog' case
+4. **Contact Form**: Customize the form fields in the 'contact' case
+
+## Deployment
+
+1. Build the application:
+```bash
+npm run build
+```
+
+2. Deploy to your preferred hosting platform:
+- Vercel (recommended)
+- Netlify
+- AWS
+- Digital Ocean
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+```bash
+git checkout -b feature/amazing-feature
+```
+3. Commit your changes
+```bash
+git commit -m 'Add amazing feature'
+```
+4. Push to the branch
+```bash
+git push origin feature/amazing-feature
+```
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Lucide React for the beautiful icons
+- Tailwind CSS for the utility-first CSS framework
+- Next.js team for the amazing framework
+
+## Contact
+
+Your Name - Aruna
+
+Project Link: [https://github.com/yourusername/interactive-portfolio](https://github.com/yourusername/interactive-portfolio)

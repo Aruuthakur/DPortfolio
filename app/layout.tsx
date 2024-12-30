@@ -1,10 +1,7 @@
-import '@/styles/globals.css'
-import type { Metadata } from 'next'
+"use client"; // This makes the component a Client Component
 
-export const metadata: Metadata = {
-  title: 'DPortfolio',
-  description: 'My developer portfolio',
-}
+import '@/styles/globals.css'
+import { SessionProvider } from 'next-auth/react'
 
 export default function RootLayout({
   children,
@@ -14,8 +11,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-gray-100 dark:bg-gray-900">
-        {children}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   )
-} 
+}
+
+// Move metadata to a separate file or define it in a Server Component 
